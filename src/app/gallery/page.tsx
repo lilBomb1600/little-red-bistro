@@ -1,11 +1,9 @@
-import type { Metadata } from "next";
+import { pageMetadata } from "@/lib/seo/metadata";
+import { pageCopy } from "@/lib/seo/copy";
 import { Container } from "@/components/ui/Container";
 import { MasonryGallery } from "@/components/gallery/MasonryGallery";
 
-export const metadata: Metadata = {
-  title: "Gallery | Little Red Bistro",
-  description: "A look inside Little Red Bistro — crêpes, panini, coffee, and our Pleasant Hill patio.",
-};
+export const metadata = pageMetadata(pageCopy.gallery);
 
 export default function GalleryPage() {
   return (

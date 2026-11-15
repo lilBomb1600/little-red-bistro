@@ -1,4 +1,5 @@
-import type { Metadata } from "next";
+import { pageMetadata } from "@/lib/seo/metadata";
+import { pageCopy } from "@/lib/seo/copy";
 import { Check, ShieldCheck } from "lucide-react";
 import { Container } from "@/components/ui/Container";
 import { Reveal } from "@/components/ui/Reveal";
@@ -6,10 +7,7 @@ import { SmartImage } from "@/components/ui/SmartImage";
 import { business } from "@/data/business";
 import { galleryImages } from "@/data/gallery";
 
-export const metadata: Metadata = {
-  title: "About | Little Red Bistro",
-  description: business.description,
-};
+export const metadata = pageMetadata(pageCopy.about);
 
 const heroImage = galleryImages.find((g) => g.id === "coffee-bags-shelf")!;
 const storyImage = galleryImages.find((g) => g.id === "storefront-exterior")!;

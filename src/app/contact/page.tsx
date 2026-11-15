@@ -1,13 +1,11 @@
-import type { Metadata } from "next";
+import { pageMetadata } from "@/lib/seo/metadata";
+import { pageCopy } from "@/lib/seo/copy";
 import { Clock, Mail, MapPin, Phone } from "lucide-react";
 import { Container } from "@/components/ui/Container";
 import { ContactForm } from "@/components/contact/ContactForm";
 import { business } from "@/data/business";
 
-export const metadata: Metadata = {
-  title: "Contact | Little Red Bistro",
-  description: "Get in touch with Little Red Bistro in Pleasant Hill, CA.",
-};
+export const metadata = pageMetadata(pageCopy.contact);
 
 export default function ContactPage() {
   return (

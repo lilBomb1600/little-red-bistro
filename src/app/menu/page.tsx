@@ -1,13 +1,11 @@
-import type { Metadata } from "next";
+import { pageMetadata } from "@/lib/seo/metadata";
+import { pageCopy } from "@/lib/seo/copy";
 import { Container } from "@/components/ui/Container";
 import { CategoryNav } from "@/components/menu/CategoryNav";
 import { CategorySection } from "@/components/menu/CategorySection";
 import { menu } from "@/data/menu";
 
-export const metadata: Metadata = {
-  title: "Menu | Little Red Bistro",
-  description: "Crêpes, panini, flatbreads, salads, and organic coffee — the full Little Red Bistro menu.",
-};
+export const metadata = pageMetadata(pageCopy.menu);
 
 export default function MenuPage() {
   return (
